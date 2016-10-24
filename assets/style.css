@@ -1,0 +1,60 @@
+#slider {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    color: green;
+}
+#logo {
+    text-align: center;
+    top: 65%;
+    font-family:"Meiryo", Osaka, "MS PGothic", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+}
+
+
+#scroll-info{
+    width: 80px;
+    margin: auto;
+    text-align: center;
+    top: 75%;
+    font-size: 20px;
+	font-weight: 700;
+}
+
+#scroll-info-line{
+	position:static;
+	height:2px;
+	overflow:hidden;
+	z-index: 0;
+}
+
+#scroll-info-line div{
+	position:static;
+	width:80px;
+	height:2px;
+	background-color:red;
+
+	-webkit-animation-duration: 1.5s;
+	        animation-duration: 1.5s;
+	-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-animation-name: scroll-info-line;
+	        animation-name: scroll-info-line;
+		-webkit-animation-timing-function:ease-in-out;
+		        animation-timing-function:ease-in-out;
+}
+@-webkit-keyframes scroll-info-line {
+	from, 5% { width: 0px; }
+	33%,66% { left: 0px; width: 80px; }
+	95%, to { left: 80px; }
+}
+
+@keyframes scroll-info-line {
+	from, 5% { width: 0px; }
+	33%,66% { left: 0px; width: 80px; }
+	95%, to { left: 80px; }
+}
